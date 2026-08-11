@@ -1,0 +1,46 @@
+# Central configuration for the commodity forecasting pipeline.
+# All scripts/notebooks read from here instead of hardcoding paths, dates, or tickers.
+
+data:
+  ticker: "CL=F" # WTI crude oil front-month future (yfinance)
+  start_date: "2019-01-01"
+  end_date: "2024-12-31"
+  fred_series:
+    dollar_index: "DTWEXBGS" # Trade weighted USD index, broad (proxy for DXY)
+    treasury_10y: "DGS10" # 10-year US Treasury constant maturity rate
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  results_dir: "data/processed/results"
+
+features:
+  price_lags: [1, 5, 20]
+  moving_averages: [5, 20, 50]
+  volatility_window: 20
+  rsi_window: 14
+  macro_delta_window: 5
+
+split:
+  train: 0.70
+  val: 0.15
+  test: 0.15
+
+models:
+  xgboost:
+    n_estimators: 300
+    max_depth: 4
+    learning_rate: 0.05
+    random_state: 42
+    n_jobs: 1 # avoid OpenMP thread conflicts with PyTorch in the same process
+  lstm:
+    sequence_length: 20
+    hidden_size: 50
+    num_layers: 2
+    dropout: 0.2
+    epochs: 50
+    batch_size: 32
+    learning_rate: 0.001
+    random_state: 42
+
+backtest:
+  transaction_cost_bps: 5 # cost per position change, in basis points
+  initial_capital: 10000

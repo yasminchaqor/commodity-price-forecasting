@@ -1,0 +1,155 @@
+{
+  "baseline_reg": {
+    "ml_metrics": {
+      "mae": 1.0661186671148153,
+      "rmse": 1.35592339019818,
+      "mape": 0.014192204953405582
+    },
+    "backtest": {
+      "strategy": {
+        "cumulative_return": 0.0,
+        "sharpe_ratio": 0.0,
+        "max_drawdown": 0.0,
+        "win_rate": 0.0
+      },
+      "buy_and_hold": {
+        "cumulative_return": -0.09066994850209853,
+        "sharpe_ratio": -0.2355409323044149,
+        "max_drawdown": -0.24347028846501695,
+        "win_rate": 0.4748858447488584
+      }
+    }
+  },
+  "baseline_clf": {
+    "ml_metrics": {
+      "accuracy": 0.4748858447488584,
+      "f1": 0.6439628482972136,
+      "confusion_matrix": [
+        [
+          0,
+          115
+        ],
+        [
+          0,
+          104
+        ]
+      ]
+    },
+    "backtest": {
+      "strategy": {
+        "cumulative_return": -0.09066994850209853,
+        "sharpe_ratio": -0.2355409323044149,
+        "max_drawdown": -0.24347028846501695,
+        "win_rate": 0.4748858447488584
+      },
+      "buy_and_hold": {
+        "cumulative_return": -0.09066994850209853,
+        "sharpe_ratio": -0.2355409323044149,
+        "max_drawdown": -0.24347028846501695,
+        "win_rate": 0.4748858447488584
+      }
+    }
+  },
+  "xgboost_reg": {
+    "ml_metrics": {
+      "mae": 1.2982572790694564,
+      "rmse": 1.6291180612033669,
+      "mape": 0.017430893921189548
+    },
+    "backtest": {
+      "strategy": {
+        "cumulative_return": -0.10358838599673559,
+        "sharpe_ratio": -0.4324144610496679,
+        "max_drawdown": -0.22235369534179905,
+        "win_rate": 0.40350877192982454
+      },
+      "buy_and_hold": {
+        "cumulative_return": -0.09066994850209853,
+        "sharpe_ratio": -0.2355409323044149,
+        "max_drawdown": -0.24347028846501695,
+        "win_rate": 0.4748858447488584
+      }
+    }
+  },
+  "xgboost_clf": {
+    "ml_metrics": {
+      "accuracy": 0.502283105022831,
+      "f1": 0.5917602996254682,
+      "confusion_matrix": [
+        [
+          31,
+          84
+        ],
+        [
+          25,
+          79
+        ]
+      ]
+    },
+    "backtest": {
+      "strategy": {
+        "cumulative_return": -0.11113007096349681,
+        "sharpe_ratio": -0.4282693739708182,
+        "max_drawdown": -0.26461471828553973,
+        "win_rate": 0.40625
+      },
+      "buy_and_hold": {
+        "cumulative_return": -0.09066994850209853,
+        "sharpe_ratio": -0.2355409323044149,
+        "max_drawdown": -0.24347028846501695,
+        "win_rate": 0.4748858447488584
+      }
+    }
+  },
+  "lstm_reg": {
+    "ml_metrics": {
+      "mae": 7.130927581787109,
+      "rmse": 8.927640647566388,
+      "mape": 0.08945730863547682
+    },
+    "backtest": {
+      "strategy": {
+        "cumulative_return": 0.17845797102870908,
+        "sharpe_ratio": 2.2377448644557725,
+        "max_drawdown": -0.04307959720438359,
+        "win_rate": 0.5714285714285714
+      },
+      "buy_and_hold": {
+        "cumulative_return": -0.12682248781183547,
+        "sharpe_ratio": -0.4363447837769844,
+        "max_drawdown": -0.24347028846501662,
+        "win_rate": 0.48
+      }
+    }
+  },
+  "lstm_clf": {
+    "ml_metrics": {
+      "accuracy": 0.555,
+      "f1": 0.6079295154185022,
+      "confusion_matrix": [
+        [
+          42,
+          62
+        ],
+        [
+          27,
+          69
+        ]
+      ]
+    },
+    "backtest": {
+      "strategy": {
+        "cumulative_return": 0.05079955136077574,
+        "sharpe_ratio": 0.38577494876868346,
+        "max_drawdown": -0.17746368109520416,
+        "win_rate": 0.45695364238410596
+      },
+      "buy_and_hold": {
+        "cumulative_return": -0.12682248781183547,
+        "sharpe_ratio": -0.4363447837769844,
+        "max_drawdown": -0.24347028846501662,
+        "win_rate": 0.48
+      }
+    }
+  }
+}
